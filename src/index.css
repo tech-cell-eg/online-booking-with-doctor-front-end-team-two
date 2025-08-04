@@ -33,6 +33,7 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -65,7 +66,38 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .doctor-card {
+    @apply w-full max-w-md h-28 flex border-[#BBC1C7] items-center
+  }
+
+  .doctor-image {
+    @apply w-full h-full object-cover object-top rounded-l-xl
+  }
+
+  .doctor-title {
+    @apply text-lg font-news
+  }
+
+  .doctor-content {
+    @apply flex h-full flex-col p-0 items-start
+  }
+
+  .doctor-description {
+    @apply text-gray-600
+  }
+
+  .doctor-footer-text {
+    @apply font-semibold text-indigo-950
+  }
+
+  .flex-group {
+    @apply flex items-center gap-2
   }
 }
