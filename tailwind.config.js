@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'noto': ["Noto Serif", "serif"],
+        'montserrat': ["Montserrat", "serif"],
         'news': ["Newsreader", "serif"],
       },
       borderRadius: {
@@ -43,6 +43,12 @@ export default {
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
+        },
+        success: {
+          DEFAULT: "#EDF7EE"
+        },
+        danger: {
+          DEFAULT: "#FFEDED"
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

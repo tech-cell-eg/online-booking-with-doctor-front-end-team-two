@@ -1,5 +1,11 @@
 import { Clock, Heart, Star } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
 import { useState } from "react";
 
 function DoctorCard({ doctor }) {
@@ -15,31 +21,31 @@ function DoctorCard({ doctor }) {
         </div>
 
         {/* Content */}
-        <div className="flex-1 pl-4">
-          <CardHeader className="p-0">
+        <div className="flex flex-col flex-1 gap-2 pl-3 justify-between h-full ">
+          <CardHeader className="p-0 pt-1 h-[40%]">
             <CardTitle className="doctor-title">{name}</CardTitle>
           </CardHeader>
           <CardContent className="doctor-content">
             <p className="doctor-description">
               {specialty} | {hospital}
             </p>
-            <div className="flex gap-6 pt-2">
+          </CardContent>
+          <CardFooter className="flex gap-4 p-0 pb-3">
               <div className="flex-group">
                 <Star size={20} fill="gold" stroke="0" />
                 <p className="doctor-footer-text">{rating}</p>
               </div>
-              <div className="flex-group">
-                <Clock size={20} color="#7d848a" strokeWidth={1.5}/>
+              <div className="flex-group flex-shrink-0">
+                <Clock size={20} color="#7d848a" strokeWidth={1.5} />
                 <p className="doctor-footer-text">
                   {workingHours.start} - {workingHours.end}
                 </p>
               </div>
-            </div>
-          </CardContent>
+          </CardFooter>
         </div>
 
         {/* Like */}
-        <div className="pr-4">
+        <div className="pr-2">
           <Heart
             className="cursor-pointer hover:fill-[#ff0000] hover:stroke-none transition-all duration-300"
             size={25}

@@ -1,15 +1,13 @@
-import DoctorCard from "@/components/DoctorCard";
 import { doctors } from "../../Data/doctors.json";
+import DoctorsList from "@/components/DoctorsList";
 
 function Home() {
-  const doctor = doctors[0]
   return (
-    <div className="flex flex-col items-center justify-center ">
-      <h1 className="text-xl font-bold">Home Page</h1>
-      <div className="flex flex-col items-center gap-6">
-        {doctors.map((doctor) => {
-          return <DoctorCard doctor={doctor} key={doctor.id}></DoctorCard>;
-        })}
+    <div className="grid-cols-4 px-6">
+      <div className="w-full h-[40vh] bg-primary">Image/HeroSection</div>
+      <div className="py-10">
+        <h2 className="p-2">Doctors near you</h2>
+        <DoctorsList doctors={doctors}/>
       </div>
     </div>
   );
