@@ -1,6 +1,5 @@
-import { BrowserRouter, Route, Router, Routes } from 'react-router'
+import { BrowserRouter, Route, Routes } from 'react-router'
 import './App.css'
-import DoctorCard from './components/DoctorCard'
 import Home from './pages/Home'
 function App() {
   return (
