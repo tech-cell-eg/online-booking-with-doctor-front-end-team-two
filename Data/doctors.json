@@ -1,0 +1,106 @@
+{
+  "doctors": [
+    {
+      "id": 1,
+      "name": "Dr. John Doe",
+      "specialty": "Orthopedic",
+      "hospital": "El-Nasr Hospital",
+      "rating": 4.5,
+      "totalRatings": 127,
+      "workingHours": {
+        "start": "9:30am",
+        "end": "8:00pm"
+      },
+      "likes": 89,
+      "isLiked": false,
+      "image": "/doctor1.jpg",
+      "experience": "8 years",
+      "consultationFee": 150
+    },
+    {
+      "id": 2,
+      "name": "Dr. Sarah Johnson",
+      "specialty": "Cardiology",
+      "hospital": "Cairo Medical Center",
+      "rating": 4.8,
+      "totalRatings": 203,
+      "workingHours": {
+        "start": "8:00am",
+        "end": "6:00pm"
+      },
+      "likes": 156,
+      "isLiked": true,
+      "image": "/doctor2.jpg",
+      "experience": "12 years",
+      "consultationFee": 200
+    },
+    {
+      "id": 3,
+      "name": "Dr. Ahmed Hassan",
+      "specialty": "Neurology",
+      "hospital": "Alexandria Hospital",
+      "rating": 4.6,
+      "totalRatings": 89,
+      "workingHours": {
+        "start": "10:00am",
+        "end": "7:00pm"
+      },
+      "likes": 67,
+      "isLiked": false,
+      "image": "/doctor3.jpg",
+      "experience": "15 years",
+      "consultationFee": 180
+    },
+    {
+      "id": 4,
+      "name": "Dr. Maria Garcia",
+      "specialty": "Pediatrics",
+      "hospital": "Children's Medical Center",
+      "rating": 4.9,
+      "totalRatings": 245,
+      "workingHours": {
+        "start": "9:00am",
+        "end": "5:00pm"
+      },
+      "likes": 234,
+      "isLiked": true,
+      "image": "/doctor4.jpg",
+      "experience": "10 years",
+      "consultationFee": 120
+    },
+    {
+      "id": 5,
+      "name": "Dr. Michael Brown",
+      "specialty": "Dermatology",
+      "hospital": "Skin Care Clinic",
+      "rating": 4.3,
+      "totalRatings": 156,
+      "workingHours": {
+        "start": "11:00am",
+        "end": "9:00pm"
+      },
+      "likes": 78,
+      "isLiked": false,
+      "image": "/doctor5.jpg",
+      "experience": "6 years",
+      "consultationFee": 140
+    },
+    {
+      "id": 6,
+      "name": "Dr. Emily Chen",
+      "specialty": "Psychiatry",
+      "hospital": "Mental Health Institute",
+      "rating": 4.7,
+      "totalRatings": 178,
+      "workingHours": {
+        "start": "2:00pm",
+        "end": "10:00pm"
+      },
+      "likes": 142,
+      "isLiked": true,
+      "image": "/doctor6.jpg",
+      "experience": "9 years",
+      "consultationFee": 160
+    }
+  ]
+}
