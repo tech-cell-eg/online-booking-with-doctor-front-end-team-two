@@ -1,18 +1,19 @@
-
+import ForgetPassword from './components/Authentication/ForgetPassword/ForgetPassword'
 import SignIn from './components/Authentication/SignIn/SignIn'
 import SignUp from './components/Authentication/SignUp/SignUp'
+import UpdatePassword from './components/Authentication/UpdatePassword/UpdatePassword'
+import Verification from './components/Authentication/Verification/Verification'
 import BookYourAppoinment from './components/BookYourAppoinment/BookYourAppoinment'
-// import Home from './components/Home/Home'
-// import { Button } from './components/ui/button'
+import FindDoctors from './components/FindDoctors/FindDoctors'
+import Home from './components/Home/Home'
+
 
 function App() {
+
+ 
   return (
     <>
-      {/* <h1 className='bg-red-800'>Hello</h1>
-      <Button>Text</Button> */}
-      {/* <Home/> */}
-
-<SignIn/>
+   <Home/>
     </>
   )
 }
