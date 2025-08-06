@@ -31,11 +31,11 @@
     --chart-3: 221.4336 86.3731% 54.0624%;
     --chart-4: 223.6587 78.7180% 47.8635%;
     --chart-5: 226.5426 70.0108% 39.9224%;
-    --sidebar: 223.8136 0.0004% 98.0256%;
+    --sidebar: 0 0% 100%;
     --sidebar-foreground: 223.8136 0.0000% 3.9388%;
     --sidebar-primary: 223.8136 0.0000% 9.0527%;
     --sidebar-primary-foreground: 223.8136 0.0004% 98.0256%;
-    --sidebar-accent: 223.8136 0.0002% 96.0587%;
+    --sidebar-accent: 213.7500 53.3333% 94.1176%;
     --sidebar-accent-foreground: 223.8136 0.0000% 9.0527%;
     --sidebar-border: 223.8136 0.0001% 89.8161%;
     --sidebar-ring: 223.8136 0.0000% 63.0163%;
@@ -53,6 +53,7 @@
     --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
     --tracking-normal: 0em;
     --spacing: 0.24rem;
+    --sidebar-background: 0 0% 98%;
   }
 
   .dark {
@@ -81,13 +82,13 @@
     --chart-4: 223.6587 78.7180% 47.8635%;
     --chart-5: 226.5426 70.0108% 39.9224%;
     --sidebar: 223.8136 0.0000% 9.0527%;
-    --sidebar-foreground: 223.8136 0.0004% 98.0256%;
-    --sidebar-primary: 225.3451 84.0953% 48.9841%;
-    --sidebar-primary-foreground: 223.8136 0.0004% 98.0256%;
-    --sidebar-accent: 223.8136 0.0000% 14.9382%;
-    --sidebar-accent-foreground: 223.8136 0.0004% 98.0256%;
-    --sidebar-border: 223.8136 0.0000% 15.5096%;
-    --sidebar-ring: 223.8136 0.0000% 32.1993%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
     --font-sans: Montserrat, ui-sans-serif, sans-serif, system-ui;
     --font-serif: Newsreader, ui-serif, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -100,6 +101,7 @@
     --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 4px 6px -1px hsl(0 0% 0% / 0.10);
     --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 8px 10px -1px hsl(0 0% 0% / 0.10);
     --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+    --sidebar-background: 240 5.9% 10%;
   }
 }
 
@@ -115,6 +117,14 @@
 }
 
 @layer utilities {
+  .page-container {
+    @apply flex-grow my-6 mx-8
+  }
+
+  .avatar-image {
+    @apply rounded-full w-[35px] h-[35px] object-cover object-top
+  }
+
   .doctor-card {
     @apply w-full max-w-md flex max-h-32 items-center
   }
@@ -132,14 +142,26 @@
   }
 
   .doctor-description {
-    @apply text-gray-600
+    @apply text-gray-600 text-sm
   }
 
   .doctor-footer-text {
-    @apply font-semibold text-indigo-950 text-sm
+    @apply font-semibold text-indigo-950 text-xs
   }
 
   .flex-group {
     @apply flex items-center gap-2
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
   }
 }

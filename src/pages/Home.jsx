@@ -1,13 +1,29 @@
-import { doctors } from "../../Data/doctors.json";
+import AppPagination from "@/components/AppPagination";
 import DoctorsList from "@/components/DoctorsList";
+import HomeHero from "@/components/HomeHero";
+import { useNearbyDoctors } from "@/hooks/useNearbyDoctors";
+import AppSearch from "@/components/AppSearch";
+import { useSearchDoctors } from "@/hooks/useSearchDoctors";
 
 function Home() {
+  //load nearby doctors
+  const { isPending, isError, data: nearbyDoctors, error } = useNearbyDoctors();
+  const { onSearch, doctors: searchedDoctors, isPending: isDoctors, error: isDoctorError } = useSearchDoctors();
+
+  
+  if (isPending) return;
+  
+  /*TODO: if user search fetch data from server, replace current data with new one -> Done*/ 
+  const doctors = searchedDoctors.length === 0 ? nearbyDoctors : searchedDoctors 
+
   return (
-    <div className="grid-cols-4 px-6">
-      <div className="w-full h-[40vh] bg-primary">Image/HeroSection</div>
-      <div className="py-10">
-        <h2 className="p-2">Doctors near you</h2>
-        <DoctorsList doctors={doctors}/>
+    <div className="page-container">
+      <div className="">
+        <HomeHero />
+        <h2 className="font-bold py-6">Doctors near you</h2>
+        <AppSearch onClick={onSearch}></AppSearch>
+        <DoctorsList doctors={doctors} />
+        <AppPagination prev="doctors" next="doctors" />
       </div>
     </div>
   );

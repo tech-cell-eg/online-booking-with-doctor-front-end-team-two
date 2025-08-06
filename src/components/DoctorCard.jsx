@@ -14,46 +14,49 @@ function DoctorCard({ doctor }) {
   const [isLike, setIsLike] = useState(false);
   return (
     <>
-      <Card className="doctor-card">
+      <Card className="p-0 flex w-[100%] h-28 sm:h-24">
         {/* Image */}
-        <div className="basis-1/4 h-full">
+        <div className="w-[25%]">
           <img src="/public/doctor.jpg" alt="doctor" className="doctor-image" />
         </div>
 
-        {/* Content */}
-        <div className="flex flex-col flex-1 gap-2 pl-3 justify-between h-full ">
-          <CardHeader className="p-0 pt-1 h-[40%]">
-            <CardTitle className="doctor-title">{name}</CardTitle>
-          </CardHeader>
-          <CardContent className="doctor-content">
-            <p className="doctor-description">
-              {specialty} | {hospital}
-            </p>
-          </CardContent>
-          <CardFooter className="flex gap-4 p-0 pb-3">
+        {/* Card */}
+        <div className="flex flex-1 items-center ml-2">
+          {/* Content */}
+          <div className="flex flex-col flex-1">
+            <CardHeader className="">
+              <CardTitle className="doctor-title">{name}</CardTitle>
+            </CardHeader>
+            <CardContent className="card-content">
+              <p className="doctor-description">
+                {specialty} | {hospital}
+              </p>
+            </CardContent>
+            <CardFooter className="flex-1 gap-2 xs:gap-4">
               <div className="flex-group">
                 <Star size={20} fill="gold" stroke="0" />
                 <p className="doctor-footer-text">{rating}</p>
               </div>
-              <div className="flex-group flex-shrink-0">
+              <div className="flex-group">
                 <Clock size={20} color="#7d848a" strokeWidth={1.5} />
                 <p className="doctor-footer-text">
                   {workingHours.start} - {workingHours.end}
                 </p>
               </div>
-          </CardFooter>
-        </div>
+            </CardFooter>
+          </div>
 
-        {/* Like */}
-        <div className="pr-2">
-          <Heart
-            className="cursor-pointer hover:fill-[#ff0000] hover:stroke-none transition-all duration-300"
-            size={25}
-            fill={`${isLike ? "red" : "white"}`}
-            onClick={() => setIsLike((prev) => !prev)}
-            stroke={`${isLike ? "none" : "black"}`}
-            strokeWidth={0.8}
-          />
+          {/* Like */}
+          <div className="pr-2">
+            <Heart
+              className="cursor-pointer hover:fill-[#ff0000] hover:stroke-none transition-all duration-300"
+              size={25}
+              fill={`${isLike ? "red" : "white"}`}
+              onClick={() => setIsLike((prev) => !prev)}
+              stroke={`${isLike ? "none" : "black"}`}
+              strokeWidth={0.8}
+            />
+          </div>
         </div>
       </Card>
     </>

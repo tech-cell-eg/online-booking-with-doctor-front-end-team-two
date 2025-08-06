@@ -1,10 +1,11 @@
 import { Outlet } from "react-router";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "./AppSidebar";
 
 function AppLayout() {
   return (
-    <div className="flex justify-center">
-      <nav className="bg-teal-600 w-[250px] grid-"></nav>
-      <Outlet/>
+    <div className="flex">
+      <Outlet />
     </div>
   );
 }
