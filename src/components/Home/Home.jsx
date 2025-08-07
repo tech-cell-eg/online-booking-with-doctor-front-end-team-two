@@ -1,8 +1,21 @@
+import { useEffect } from 'react';
 import { BsHeartPulse } from 'react-icons/bs';
+import { useNavigate } from 'react-router';
 export default function Home() {
+  const navigate = useNavigate()
+
+   useEffect(() => {
+    const timer = setTimeout(
+      () => {
+      navigate("/SignUp");
+    }, 500);
+ 
+    return () => clearTimeout(timer);
+  }, [navigate]);
+
   return (
     <>
- 
+
     <section className='bg-[#145DB8] min-h-screen flex flex-col justify-around items-center'>
       <div className="" >
           <BsHeartPulse size="60" color="white" />
@@ -25,3 +38,12 @@ export default function Home() {
     </>
   )
 }
+
+
+
+
+
+
+
+
+
